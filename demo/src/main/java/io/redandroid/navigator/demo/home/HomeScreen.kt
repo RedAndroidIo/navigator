@@ -7,17 +7,15 @@ import androidx.compose.runtime.Composable
 import kotlin.random.Random
 
 @Composable
-fun HomeScreen(
-	onRandom: (Int) -> Unit
-) {
-	Column {
-		Button(
-			onClick = {
-				val randomNumber = Random.nextInt()
-				onRandom(randomNumber)
-			}
-		) {
-			Text(text = "Random")
-		}
-	}
+fun HomeScreen() = homeScreenDestination {
+    Column {
+        Button(
+            onClick = {
+                val randomNumber = Random.nextInt()
+                navigateToDetails(randomNumber)
+            }
+        ) {
+            Text(text = "Random")
+        }
+    }
 }

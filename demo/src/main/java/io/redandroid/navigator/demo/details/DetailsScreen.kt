@@ -6,9 +6,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.font.FontWeight
 
 @Composable
-fun DetailsScreen(number: Int) {
-	Column {
-		Text(text = "The result is")
-		Text(text = number.toString(), fontWeight = FontWeight.Bold)
-	}
+fun DetailsScreen() = detailsScreenDestination {
+    Column {
+        Text(text = "The result is")
+        Text(text = myParam.toString(), fontWeight = FontWeight.Bold)
+    }
 }

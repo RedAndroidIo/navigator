@@ -14,32 +14,20 @@ import io.redandroid.navigator.demo.home.HomeScreen
 import io.redandroid.navigator.demo.ui.theme.NavGraphConfigComposeTheme
 
 class MainActivity : ComponentActivity() {
-	override fun onCreate(savedInstanceState: Bundle?) {
-		super.onCreate(savedInstanceState)
-		setContent {
-			NavGraphConfigComposeTheme {
-				Box(modifier = Modifier.padding(16.dp)) {
-					Main()
-				}
-			}
-		}
-	}
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            NavGraphConfigComposeTheme {
+                Box(modifier = Modifier.padding(16.dp)) {
+                    Main()
+                }
+            }
+        }
+    }
 }
 
 @Composable
-fun Main() {
-	Navigator {
-		homeScreen {
-			HomeScreen(
-				onRandom = {
-					navigateToDetails(it)
-
-				}
-			)
-		}
-
-		detailsScreen {
-			DetailsScreen(number = myParam)
-		}
-	}
+fun Main() = Navigator {
+    HomeScreen()
+    DetailsScreen()
 }
