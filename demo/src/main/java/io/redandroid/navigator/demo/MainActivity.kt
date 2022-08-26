@@ -9,8 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import io.redandroid.navigator.Navigator
-import io.redandroid.navigator.demo.details.DetailsScreen
-import io.redandroid.navigator.demo.home.HomeScreen
+import io.redandroid.navigator.demo.details.detailsScreenDestination
+import io.redandroid.navigator.demo.home.homeScreenDestination
 import io.redandroid.navigator.demo.ui.theme.NavGraphConfigComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,6 +28,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Main() = Navigator {
-    HomeScreen()
-    DetailsScreen()
+    homeScreenDestination()
+    detailsScreenDestination()
 }
